@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "API Documentation";
+}
+<div class="row">
+    <div>
+        <h1>API documentation</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Url</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Error codes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <a href="/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da" target="_blank">/artist/{mbid}</a>
+                </td>
+                <td>GET</td>
+                <td>
+                    <p>
+                        Returns information about the artist in JSON by mashing up data from <a href="https://musicbrainz.org/" target="_blank">Music Brainz</a>, <a href="https://www.mediawiki.org/wiki/API:Main_page" target="blank">Wikipedia</a>, and <a href="https://coverartarchive.org" target="_blank">Cover Art Archive</a>. Mbid is the <a href="https://musicbrainz.org/doc/MusicBrainz_Identifier" target="_blank">Music Brainz Identifier</a> of the artist.
+                    </p>
+                </td>
+                <td>
+                    <p><strong>400</strong> - Badly formed request, could not be served</p>
+                    <p><strong>404</strong> - The mbid was not found in Music Brainz</p>
+                    <p><strong>500</strong> - Unexpected error</p>
+                    <p><strong>503</strong> - Failed to get response from Muic Brainz</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
